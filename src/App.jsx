@@ -9,7 +9,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Juego insano</h1>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<List />}></Route>

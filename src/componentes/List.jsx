@@ -5,11 +5,14 @@ import './List.css';
 
 function List() {
     return (
-        <ListGroup>
-            <ListGroup.Item><Link to={"/Reciclar"}>Reciclar</Link></ListGroup.Item>
-            <ListGroup.Item><Link to={"/ProblemasAmbientales"}>Problemas ambientales</Link></ListGroup.Item>
-            <ListGroup.Item><Link to={"/CalentamientoGlobal"}>Calentamiento global</Link></ListGroup.Item>
-        </ListGroup>
+        <>
+            <h1>Juego insano</h1>
+            <ListGroup>
+                <ListGroup.Item><Link to={"/Reciclar"}>Reciclar</Link></ListGroup.Item>
+                <ListGroup.Item><Link to={"/ProblemasAmbientales"}>Problemas ambientales</Link></ListGroup.Item>
+                <ListGroup.Item><Link to={"/CalentamientoGlobal"}>Calentamiento global</Link></ListGroup.Item>
+            </ListGroup>
+        </>
     );
 }
 

@@ -4,9 +4,9 @@ import './List.css';
 
 function ProblemasAmbientales() {
     return (
-        <ListGroup>
-            <ListGroup.Item><Button className='boton' variant="light">juego</Button></ListGroup.Item>
-        </ListGroup>
+        <div className="list-container">
+        <h1>hello world</h1>
+        </div>
     );
 }
 

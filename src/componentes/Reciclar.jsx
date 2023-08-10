@@ -24,22 +24,22 @@ function Reciclar() {
         setItemActual(Math.floor(Math.random() * item.length))
     }, [])
 
-    const handleChange = (e) => {
-        e.preventDefault()
-        if (item[itemActual].reciclable === e.target.value) {
-            if (item.length === 1) {
-                document.getElementById('root').innerHTML = '<h1>¡Ganaste!</h1>'
-            }
-            else {
-                alert('Correcto')
-                item.splice(itemActual, 1)
-                setItemActual(Math.floor(Math.random() * item.length))
-            }
+const handleChange = (e) => {
+    e.preventDefault();
+    if (item[itemActual].reciclable === e.target.value) {
+        if (item.length === 1) {
+            document.getElementById('root').innerHTML = '<h1>¡Ganaste!</h1>';
+        } else {
+            alert('Correcto');
+            const newItemList = item.slice(); // Crear una copia del array
+            newItemList.splice(itemActual, 1);
+            setItem(newItemList);
+            setItemActual(Math.floor(Math.random() * newItemList.length));
         }
-        else {
-            alert('Incorrecto')
-        }
+    } else {
+        alert('Incorrecto');
     }
+};
 
     return (
         <form className="image-container" >

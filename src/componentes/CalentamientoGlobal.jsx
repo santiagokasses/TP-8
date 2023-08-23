@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import ListGroup from 'react-bootstrap/ListGroup';
 import ProgressBar from "@ramonak/react-progress-bar";
 import Button from 'react-bootstrap/Button';
-import './List.css';
+import './CalentamientoGlobal.css';
 
 function CalentamientoGlobal() {
     const [completed, setCompleted] = useState(50);
@@ -23,11 +22,12 @@ function CalentamientoGlobal() {
 
     return (
         <>
-        <div>
-            <h1>Salvar al mundo</h1>
-            <ProgressBar completed={completed} bgColor="grey" animateOnRender={true} />
-        </div>
-            <Button onClick={handleClick} >AAAAAAAAAAAA</Button>
+            <div className="container">
+                <img src="https://images.vexels.com/media/users/3/160982/isolated/preview/1b0eb174bde37b2d0b622aa0ced410dd-planeta-tierra-globo-europa-africa-plana.png" alt="" />
+                <ProgressBar className="progressBar" completed={completed} bgColor="#6db65b" height="20px" />
+                <img src="https://cdn-icons-png.flaticon.com/512/2933/2933866.png" alt="Earth icon" />
+                <Button onClick={handleClick}>Reducir</Button>
+            </div>
         </>
     );
 }

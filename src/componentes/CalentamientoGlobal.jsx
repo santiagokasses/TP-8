@@ -4,17 +4,24 @@ import Button from 'react-bootstrap/Button';
 import './CalentamientoGlobal.css';
 
 function CalentamientoGlobal() {
+
     const [completed, setCompleted] = useState(50);
 
     useEffect(() => {
         const interval = setInterval(() => {
             if (completed < 100) {
-                setCompleted(prevCompleted => prevCompleted + 1);
+                setCompleted(prevCompleted => prevCompleted + 1)
             }
-        }, 200);
+            if (completed === 100) {
+                window.location.href = '/Perdiste'
+            }
+            if (completed === 0) {
+                window.location.href = '/Ganaste'
+            }
+        }, 200)
 
         return () => clearInterval(interval);
-    }, [completed]);
+    }, [completed])
 
     const handleClick = (e) => {
         setCompleted(completed - 1)
@@ -29,7 +36,7 @@ function CalentamientoGlobal() {
                 <Button onClick={handleClick}>Reducir</Button>
             </div>
         </>
-    );
+    )
 }
 
 export default CalentamientoGlobal;

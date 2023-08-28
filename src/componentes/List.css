@@ -4,21 +4,21 @@
     cursor: pointer;
 }
 .custom-button {
-    background-color: transparent;
-    border: none;
-    color: #333;
-    cursor: pointer;
+    --bs-btn-color: none;
+    --bs-btn-bg: none;
+    --bs-btn-border-color: none;
+    --bs-btn-hover-color: none;
+    --bs-btn-hover-bg: none;
+    --bs-btn-hover-border-color: none;
+    --bs-btn-focus-shadow-rgb: none;
+    --bs-btn-active-color: none;
+    --bs-btn-active-bg: none;
+    --bs-btn-active-border-color: none;
+    --bs-btn-active-shadow: none;
+    --bs-btn-disabled-color: none;
+    --bs-btn-disabled-bg: none;
+    --bs-btn-disabled-border-color: none;
     font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
-}
-.custom-button:hover {
-    border: none;
-    background-color: transparent;
-    color: #333;
-}
-.custom-button:active {
-    border: none;
-    background-color: transparent;
-    color: #333;
 }

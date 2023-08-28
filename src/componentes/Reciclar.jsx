@@ -17,6 +17,16 @@ function Reciclar() {
         item: 'Camila',
         reciclable: "true",
         imagen: 'https://previews.123rf.com/images/jirkaejc/jirkaejc2207/jirkaejc220700006/188308079-lata-arrugada-vac%C3%ADa-aislada-en-un-fondo-blanco.jpg',
+    },
+    {
+        item: 'vasito de agua sucio',
+        reciclable: "false",
+        imagen: 'https://previews.123rf.com/images/igorkovalchuk/igorkovalchuk2004/igorkovalchuk200400284/145894733-vaso-de-pl%C3%A1stico-desechable-sucio-vac%C3%ADo-aislado-sobre-fondo-blanco.jpg',
+    },
+    {
+        item: 'botella de agua',
+        reciclable: "true",
+        imagen: 'https://previews.123rf.com/images/olegdudko/olegdudko1807/olegdudko180702987/104501201-botella-de-agua-vac%C3%ADa-aplastada-aislada.jpg',
     },])
     const [itemActual, setItemActual] = useState(0)
 
@@ -28,7 +38,7 @@ const handleChange = (e) => {
     e.preventDefault();
     if (item[itemActual].reciclable === e.target.value) {
         if (item.length === 1) {
-            document.getElementById('root').innerHTML = '<h1>¡Ganaste!</h1>';
+            window.location.href = '/Ganaste'
         } else {
             alert('Correcto');
             const newItemList = item.slice(); // Crear una copia del array

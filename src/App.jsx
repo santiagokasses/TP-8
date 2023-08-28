@@ -3,6 +3,8 @@ import List from './componentes/List';
 import Reciclar from "./componentes/Reciclar";
 import ProblemasAmbientales from "./componentes/ProblemasAmbientales";
 import CalentamientoGlobal from "./componentes/CalentamientoGlobal";
+import Ganaste from "./componentes/Ganaste";
+import Perdiste from "./componentes/Perdiste";
 import './App.css';
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
             <Route path="/Reciclar" element={<Reciclar />}></Route>
             <Route path="/ProblemasAmbientales" element={<ProblemasAmbientales />}></Route>
             <Route path="/CalentamientoGlobal" element={<CalentamientoGlobal />}></Route>
+            <Route path="/Ganaste" element={<Ganaste />}></Route>
+            <Route path="/Perdiste" element={<Perdiste />}></Route>
           </Routes>
         </BrowserRouter>
       </header>

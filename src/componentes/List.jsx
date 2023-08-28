@@ -53,7 +53,7 @@ function List() {
                     </Button>
                 </Modal.Footer>
             </Modal>
-            <h1>Juego insano</h1>
+            <h1>Eco-Juegos ♻</h1>
             <ListGroup>
                 <ListGroup.Item>
                     <Button id='0' onClick={handleShowModal} className="custom-button" >Reciclar</Button>

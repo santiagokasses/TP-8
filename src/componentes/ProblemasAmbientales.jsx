@@ -1,6 +1,6 @@
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button';
-import './List.css';
+import './ProblemasAmbientales.css';
 import React, { useEffect, useRef,useState } from 'react';
 
 function ProblemasAmbientales() {
@@ -29,7 +29,9 @@ function ProblemasAmbientales() {
             padding: '10px',
             border: '1px solid black',
           }}
+          onMouseEnter={generateRandomPosition}
         >
+          
           Texto en Posición Aleatoria
         </div>
       </div>

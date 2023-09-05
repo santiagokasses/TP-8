@@ -24,7 +24,7 @@ function List() {
     },
     {
         title: "Problemas ambientales",
-        body: "En este juego deberas encontar las palabras escondidas en la pantalla y escribirlas en el cuadro de texto.",
+        body: "En este juego deberas encontar las palabras escondidas en la pantalla y clickearlas, para ganar debes encontrar 30.",
         link: "/ProblemasAmbientales"
     },
     {

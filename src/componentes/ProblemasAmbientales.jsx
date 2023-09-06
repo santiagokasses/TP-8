@@ -77,6 +77,7 @@ function ProblemasAmbientales() {
   const textRef = useRef(null);
   const [textPosition, setTextPosition] = useState({ x: 0, y: 0 });
   const [contador, setContador] = useState(0);
+  
   if (contador === 30) {
     window.location.href = '/Ganaste'
 }
@@ -100,13 +101,16 @@ function ProblemasAmbientales() {
 
   const loadBackgroundColor = () => {
     const backgroundImage = new Image();
-    //backgroundImage.src = "data:https://wallpaperaccess.com/full/2473952.jpg";
+    backgroundImage.crossOrigin = "Anonymous";
+    backgroundImage.src = "https://fondosmil.com/fondo/29366.jpg";
       // Cambia a la ruta de tu imagen de fondo
 
     backgroundImage.onload = function () {
       const canvas = document.createElement('canvas');
       canvas.width = backgroundImage.width;
+      console.log(canvas.width);
       canvas.height = backgroundImage.height;
+      console.log(canvas.height);
 
       const context = canvas.getContext('2d');
       context.drawImage(backgroundImage, 0, 0, backgroundImage.width, backgroundImage.height);

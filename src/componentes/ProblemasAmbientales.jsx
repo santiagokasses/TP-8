@@ -78,7 +78,7 @@ function ProblemasAmbientales() {
   const [textPosition, setTextPosition] = useState({ x: 0, y: 0 });
   const [contador, setContador] = useState(0);
   
-  if (contador === 30) {
+  if (contador === 15) {
     window.location.href = '/Ganaste'
 }
 
@@ -102,7 +102,7 @@ function ProblemasAmbientales() {
   const loadBackgroundColor = () => {
     const backgroundImage = new Image();
     backgroundImage.crossOrigin = "Anonymous";
-    backgroundImage.src = "https://fondosmil.com/fondo/29366.jpg";
+    backgroundImage.src = "/img/foto1.jpg";
       // Cambia a la ruta de tu imagen de fondo
 
     backgroundImage.onload = function () {
@@ -122,7 +122,7 @@ function ProblemasAmbientales() {
       const pixel = context.getImageData(textPositionX, textPositionY, 1, 1).data;
 
       const backgroundColor = `rgb(${pixel[0]}, ${pixel[1]}, ${pixel[2]})`;
-
+      
       textRef.current.style.color = backgroundColor; // Cambia el color de fondo del texto
     };
   };
@@ -130,13 +130,16 @@ function ProblemasAmbientales() {
   useEffect(() => {
     generateRandomPosition();
   }, []); // Generar una posición aleatoria cuando el componente se monta
+  
 
   useEffect(() => {
     loadBackgroundColor();
   }, [textPosition]);
 
   return (
-    <div style={{ position: 'relative', width: '100vw', height: '100vh' }}>
+    <div className='problemas-container' >
+      
+      
       <h1>Puntaje: {contador}</h1>
       <div
         ref={textRef}
@@ -144,13 +147,13 @@ function ProblemasAmbientales() {
           position: 'absolute',
           left: textPosition.x + 'px',
           top: textPosition.y + 'px',
-          color: 'blue',
           padding: '10px',
-          fontSize: '15px',
+          fontSize: '23px',
+          
         }}
         onMouseEnter={()=>{generateRandomPosition();  aumentarContador();} }
       >
-        Texto en Posición Aleatoria
+        Arbol
       </div>
     </div>
   );
